@@ -1,0 +1,17 @@
+[Unit]
+Description=p2pool (mini) for Monero
+After=network.target monerod.service
+Requires=monerod.service
+
+[Service]
+User=ubu
+Group=ubu
+Type=simple
+EnvironmentFile=-/etc/monero-node-stack.env
+WorkingDirectory=/opt/p2pool
+ExecStart=/bin/bash -c ". /etc/monero-node-stack.env; source /etc/monero-node-stack/p2pool.conf; eval ${P2POOL_CMD}"
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
