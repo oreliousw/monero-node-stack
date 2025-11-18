@@ -1,0 +1,28 @@
+{
+  "autosave": true,
+  "cpu": {
+    "enabled": true
+  },
+  "opencl": {
+    "enabled": false
+  },
+  "cuda": {
+    "enabled": false
+  },
+  "randomx": {
+    "init": -1,
+    "mode": "auto",
+    "1gb-pages": false
+  },
+  "pools": [
+    {
+      "url": "127.0.0.1:3333",
+      "user": "48GugGo1NLXDV59yV2n7kfdTZJSWqPHBvCBsS6Z48ZnqWLGnD4nbiT9CeRJNQtgeyBew7JfSiTp5fRqhe9E6cPBuLPHwTte",
+      "pass": "x",
+      "keepalive": true,
+      "tls": false
+    }
+  ],
+  "log-file": null,
+  "donate-level": 1
+}
