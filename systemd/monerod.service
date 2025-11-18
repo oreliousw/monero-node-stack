@@ -1,0 +1,15 @@
+[Unit]
+Description=Monero Full Node
+After=network.target
+
+[Service]
+User=ubu
+Group=ubu
+Type=simple
+ExecStart=/opt/monero/monerod --config-file /etc/monerod.conf
+Restart=always
+RestartSec=10
+LimitNOFILE=65535
+
+[Install]
+WantedBy=multi-user.target
