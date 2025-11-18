@@ -1,0 +1,20 @@
+[Unit]
+Description=XMRig CPU Miner (to local p2pool)
+After=network.target p2pool.service
+Requires=p2pool.service
+
+[Service]
+User=ubu
+Group=ubu
+Type=simple
+EnvironmentFile=-/etc/monero-node-stack.env
+WorkingDirectory=/opt/xmrig
+ExecStart=/opt/xmrig/xmrig -c /etc/monero-node-stack/xmrig.json
+Restart=always
+RestartSec=10
+Nice=10
+IOSchedulingClass=best-effort
+IOSchedulingPriority=7
+
+[Install]
+WantedBy=multi-user.target
